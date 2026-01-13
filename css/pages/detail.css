@@ -1,0 +1,259 @@
+/* ============================================
+   DETAIL PAGES (Album, Artist, Playlist)
+   Shared styles for detail view pages
+   ============================================ */
+
+/* ----------------------------------------
+   HERO SECTION
+   ---------------------------------------- */
+
+.detail-hero {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-xl);
+    padding: var(--space-3xl) 0 var(--space-xl);
+    background: linear-gradient(180deg, var(--bg-highlight) 0%, var(--bg-base) 100%);
+    margin: calc(-1 * var(--space-xl));
+    margin-bottom: var(--space-xl);
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+}
+
+.detail-cover {
+    width: 232px;
+    height: 232px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* Artist variant - circular */
+.detail-hero--artist .detail-cover {
+    border-radius: var(--radius-full);
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    min-width: 0;
+}
+
+.detail-type {
+    font-size: var(--font-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.detail-title {
+    font-size: var(--font-3xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    margin: 0;
+    line-height: var(--leading-tight);
+}
+
+.detail-subtitle {
+    font-size: var(--font-base);
+    color: var(--text-secondary);
+}
+
+.detail-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    flex-wrap: wrap;
+}
+
+.detail-meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.detail-meta-dot {
+    width: 4px;
+    height: 4px;
+    background-color: var(--text-muted);
+    border-radius: var(--radius-full);
+}
+
+/* ----------------------------------------
+   ACTION BAR
+   ---------------------------------------- */
+
+.detail-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg) 0;
+    margin-bottom: var(--space-lg);
+}
+
+.play-btn-large {
+    width: 56px;
+    height: 56px;
+    background-color: var(--accent-primary);
+    color: var(--bg-base);
+    border-radius: var(--radius-full);
+    font-size: var(--font-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--duration-fast) var(--ease-default);
+    box-shadow: 0 8px 24px rgba(132, 204, 22, 0.3);
+}
+
+.play-btn-large:hover {
+    transform: scale(1.05);
+    background-color: var(--accent-primary-hover);
+}
+
+.play-btn-large i {
+    margin-left: 2px;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    color: var(--text-secondary);
+    font-size: var(--font-lg);
+    transition: color var(--duration-fast) var(--ease-default);
+}
+
+.action-btn:hover {
+    color: var(--text-primary);
+}
+
+.action-btn.active {
+    color: var(--accent-primary);
+}
+
+/* ----------------------------------------
+   TRACK LIST (Detail variant)
+   ---------------------------------------- */
+
+.detail-track-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-track-header {
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr 100px;
+    gap: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--border-default);
+    color: var(--text-muted);
+    font-size: var(--font-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.detail-track-row {
+    display: grid;
+    grid-template-columns: 40px 1fr 1fr 100px;
+    gap: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    align-items: center;
+    transition: background-color var(--duration-fast) var(--ease-default);
+}
+
+.detail-track-row:hover {
+    background-color: var(--bg-highlight);
+}
+
+/* ----------------------------------------
+   SECTIONS (for Artist page)
+   ---------------------------------------- */
+
+.detail-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.detail-section-title {
+    font-size: var(--font-xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+}
+
+/* ----------------------------------------
+   STATS (for Artist page)
+   ---------------------------------------- */
+
+.artist-stats {
+    display: flex;
+    gap: var(--space-xl);
+    margin-top: var(--space-md);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: var(--font-lg);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* ----------------------------------------
+   RESPONSIVE
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    .detail-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: var(--space-xl);
+    }
+    
+    .detail-cover {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .detail-title {
+        font-size: var(--font-2xl);
+    }
+    
+    .detail-meta {
+        justify-content: center;
+    }
+    
+    .detail-actions {
+        justify-content: center;
+    }
+    
+    .detail-track-header {
+        display: none;
+    }
+    
+    .detail-track-row {
+        grid-template-columns: 1fr auto;
+    }
+    
+    .detail-track-row .track-number,
+    .detail-track-row .track-album {
+        display: none;
+    }
+    
+    .artist-stats {
+        justify-content: center;
+    }
+}

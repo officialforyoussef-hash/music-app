@@ -1,0 +1,202 @@
+/* ============================================
+   CARD COMPONENT
+   ============================================ */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md);
+    background-color: var(--bg-elevated);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-default);
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    background-color: var(--bg-highlight);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+/* ----------------------------------------
+   CARD IMAGE
+   ---------------------------------------- */
+
+.card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    transition: filter var(--duration-normal) var(--ease-default);
+}
+
+.card:hover .card-image img {
+    filter: brightness(0.85);
+}
+
+/* ----------------------------------------
+   CARD PLAY BUTTON
+   ---------------------------------------- */
+
+.card-play-btn {
+    position: absolute;
+    bottom: var(--space-sm);
+    right: var(--space-sm);
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    background-color: var(--accent-primary);
+    color: var(--bg-base);
+    font-size: var(--font-md);
+    border-radius: var(--radius-full);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all var(--duration-fast) var(--ease-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover .card-play-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-play-btn:hover {
+    transform: scale(1.05);
+    background-color: var(--accent-primary-hover);
+}
+
+.card-play-btn:active {
+    transform: scale(0.95);
+}
+
+.card-play-btn i {
+    margin-left: 2px;
+}
+
+/* ----------------------------------------
+   CARD INFO
+   ---------------------------------------- */
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    min-width: 0; /* Enable text truncation */
+}
+
+.card-title {
+    font-size: var(--font-base);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-subtitle {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: var(--leading-relaxed);
+}
+
+/* Multi-line subtitle variant */
+.card-subtitle--multiline {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* ----------------------------------------
+   CARD VARIANTS
+   ---------------------------------------- */
+
+/* Artist Card - Circular Image */
+.card--artist .card-image {
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-lg);
+    overflow: visible; /* Allow play button to overflow */
+}
+
+.card--artist .card-image img {
+    border-radius: var(--radius-full);
+}
+
+.card--artist .card-info {
+    text-align: center;
+}
+
+.card--artist .card-subtitle {
+    font-size: var(--font-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Play button outside the circle for artist cards */
+.card--artist .card-play-btn {
+    bottom: -8px;
+    right: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Playlist Card */
+.card--playlist .card-subtitle {
+    color: var(--text-muted);
+}
+
+/* Album Card */
+.card--album .card-image {
+    box-shadow: var(--shadow-lg);
+}
+
+/* ----------------------------------------
+   RESPONSIVE
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    .card {
+        padding: var(--space-sm);
+    }
+    
+    .card-image {
+        margin-bottom: var(--space-sm);
+    }
+    
+    .card-title {
+        font-size: var(--font-sm);
+    }
+    
+    .card-subtitle {
+        font-size: var(--font-xs);
+    }
+    
+    .card-play-btn {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        font-size: var(--font-sm);
+        /* Always visible on mobile */
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

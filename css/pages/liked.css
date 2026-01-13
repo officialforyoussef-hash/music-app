@@ -1,0 +1,79 @@
+/* ============================================
+   LIKED SONGS PAGE
+   Page-specific styles only - track components in components/
+   ============================================ */
+
+.liked-header {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-xl);
+    padding: var(--space-2xl) 0;
+    margin-bottom: var(--space-xl);
+}
+
+.liked-cover {
+    width: 232px;
+    height: 232px;
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-xl);
+    flex-shrink: 0;
+}
+
+.liked-cover i {
+    font-size: 80px;
+    color: var(--text-primary);
+}
+
+.liked-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.liked-type {
+    font-size: var(--font-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+.liked-title {
+    font-size: var(--font-3xl);
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.liked-meta {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+}
+
+/* ----------------------------------------
+   RESPONSIVE
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    .liked-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .liked-cover {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .liked-cover i {
+        font-size: 60px;
+    }
+    
+    .liked-title {
+        font-size: var(--font-2xl);
+    }
+}
