@@ -1913,8 +1913,15 @@ footer {
 
 @media (max-width: 768px) {
     .cards-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
     }
 }
 
@@ -2093,13 +2100,45 @@ footer {
     }
     
     .card-play-btn {
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
-        min-height: 40px;
-        font-size: var(--font-sm);
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
+        font-size: var(--font-xs);
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 6px;
+    }
+    
+    .card-image {
+        margin-bottom: 6px;
+    }
+    
+    .card-title {
+        font-size: var(--font-xs);
+    }
+    
+    .card-subtitle {
+        font-size: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .card-play-btn {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        font-size: 10px;
+        bottom: 4px;
+        right: 4px;
     }
 }
 
