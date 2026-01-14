@@ -1169,6 +1169,16 @@ footer {
         grid-template-columns: auto 1fr auto;
         padding: 0 var(--space-md);
         gap: var(--space-md);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--player-height);
+        z-index: var(--z-sticky);
+    }
+    
+    main {
+        padding-bottom: calc(var(--player-height) + var(--space-md));
     }
     
     .player-left {
@@ -1229,12 +1239,22 @@ footer {
         justify-content: center;
         align-items: center;
         padding: 0 var(--space-md);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--player-height);
+        z-index: var(--z-sticky);
     }
     
     .player-center {
         max-width: none;
         margin: 0;
         flex: 0 0 auto;
+    }
+    
+    main {
+        padding-bottom: calc(var(--player-height) + var(--space-md));
     }
 }
 
