@@ -1,122 +1,82 @@
-# 🎵 Music App
+# 🎵 Music Streaming App
 
-A modern, responsive music streaming web application with a sleek dark theme and intuitive user interface.
-
-![Music App Screenshot](screenshot.png)
+A modern, responsive music streaming web application built with vanilla HTML, CSS, and JavaScript.
 
 ## ✨ Features
 
-- 🎨 **Modern Dark Theme** - Easy on the eyes with a beautiful teal accent color
-- 📱 **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile devices
-- 🎛️ **Music Player** - Full-featured player with play/pause, progress bar, and volume control
-- 📚 **Library Management** - Browse playlists, albums, artists, and liked songs
-- 🔍 **Search** - Quick search for artists, songs, or albums
-- 🎯 **Organized Sections** - Recently Played, Featured Playlists, Popular Artists, New Releases
+- 🎨 **Dark Theme** - Lime green accent with dark background
+- 📱 **Fully Responsive** - Desktop, tablet, and mobile
+- 🎛️ **Music Player** - Play/pause, progress bar, volume control, shuffle, repeat
+- 📚 **Library** - Playlists, albums, artists, liked songs
+- 🔍 **Search** - Find your favorite music
+- ⚡ **SPA Navigation** - Fast page transitions without reload
+- 📲 **Mobile Gestures** - Pull to refresh, bottom sheets, expanded player
 
-## 🖼️ Screenshots
+## � Getting Started
 
-### Desktop View
-![Desktop](screenshots/desktop.png)
+### Option 1: Open directly
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/music-app.git
 
-### Mobile View
-![Mobile](screenshots/mobile.png)
+# Open index.html in browser
+open index.html
+```
 
-## 🚀 Getting Started
+### Option 2: Local server
+```bash
+# Using Python
+python -m http.server 8000
 
-### Prerequisites
+# Using Node.js
+npx serve
+```
 
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- No additional dependencies required!
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/music-app.git
-   ```
-
-2. Navigate to the project folder:
-   ```bash
-   cd music-app
-   ```
-
-3. Open `index.html` in your browser:
-   ```bash
-   open index.html
-   ```
-
-   Or use a local server like Live Server in VS Code.
+Then open `http://localhost:8000`
 
 ## 📁 Project Structure
 
 ```
 music-app/
-├── index.html          # Main HTML file
 ├── css/
-│   ├── normalize.css   # CSS reset
-│   ├── variables.css   # Design tokens (colors, spacing, etc.)
-│   ├── style.css       # Main layout grid
-│   ├── header.css      # Header styles
-│   ├── aside.css       # Sidebar styles
-│   ├── main.css        # Main content styles
-│   ├── cards.css       # Card components
-│   └── footer.css      # Player styles
+│   └── styles.css      # All styles (combined)
 ├── js/
-│   ├── main.js         # Core functionality
-│   └── player.js       # Player controls
+│   └── app.bundle.js   # All JavaScript (combined)
 ├── images/
-│   └── profile.jpg     # User profile image
-└── README.md           # Project documentation
+│   └── profile.jpg
+├── *.html              # 11 pages
+├── favicon.svg
+└── README.md
 ```
 
-## 🛠️ Technologies Used
+## �️ Tech Stack
 
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with CSS Grid, Flexbox, and CSS Variables
-- **JavaScript** - Vanilla JS for interactivity
-- **Font Awesome** - Icons
-- **Google Fonts** - Inter, Poppins, Montserrat fonts
+- HTML5
+- CSS3 (Grid, Flexbox, Variables)
+- Vanilla JavaScript
+- Font Awesome Icons
+- Google Fonts (Inter)
 
-## 🎨 Design System
+## 📄 Pages
 
-### Colors
-
-| Variable | Color | Usage |
-|----------|-------|-------|
-| `--bg-darkest` | `#1a1d1e` | Main background |
-| `--bg-dark` | `#232528` | Sidebar, header |
-| `--accent-primary` | `#82ceb8` | Primary accent (teal) |
-| `--text-primary` | `#ffffff` | Main text |
-| `--text-muted` | `#b2b2b2` | Secondary text |
-
-### Spacing
-
-- `--spacing-xs`: 5px
-- `--spacing-sm`: 10px
-- `--spacing-md`: 15px
-- `--spacing-lg`: 20px
-- `--spacing-xl`: 25px
+| Page | Description |
+|------|-------------|
+| `index.html` | Home - Recently played, featured playlists |
+| `discover.html` | Browse by genre |
+| `trending.html` | Top 10 charts |
+| `search.html` | Search music |
+| `playlists.html` | Your playlists |
+| `albums.html` | Your albums |
+| `artists.html` | Your artists |
+| `liked.html` | Liked songs |
+| `playlist.html` | Playlist detail |
+| `album.html` | Album detail |
+| `artist.html` | Artist detail |
 
 ## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+MIT License - see [LICENSE](LICENSE) file.
 
 ## 👤 Author
 
-**Youssef**
-
-- GitHub: https://github.com/officialforyoussef-hash
-
-## ⭐ Show your support
-
-Give a ⭐️ if you like this project!
+**Youssef** - [@officialforyoussef-hash](https://github.com/officialforyoussef-hash)

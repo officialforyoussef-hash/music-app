@@ -16,25 +16,7 @@
     <link rel="dns-prefetch" href="https://images.unsplash.com">
     
     <!-- CSS Files (order matters) -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    
-    <!-- Component CSS (will be added as created) -->
-    <link rel="stylesheet" href="css/components/header.css">
-    <link rel="stylesheet" href="css/components/sidebar.css">
-    <link rel="stylesheet" href="css/components/player.css">
-    <link rel="stylesheet" href="css/components/section.css">
-    <link rel="stylesheet" href="css/components/cards-grid.css">
-    <link rel="stylesheet" href="css/components/card.css">
-    <link rel="stylesheet" href="css/components/button.css">
-    <link rel="stylesheet" href="css/components/progress-bar.css">
-    <link rel="stylesheet" href="css/components/animations.css">
-    <link rel="stylesheet" href="css/components/mobile-gestures.css">
-    
-    <!-- Page CSS -->
-    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/styles.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +26,21 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body class="loading">
+    <!-- ========================================
+         PRELOADER
+         ======================================== -->
+    <div class="preloader" role="status" aria-label="Loading">
+        <svg class="preloader-logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+        <div class="preloader-spinner" aria-hidden="true"></div>
+        <div class="preloader-progress" aria-hidden="true">
+            <div class="preloader-progress-bar"></div>
+        </div>
+        <p class="preloader-text">Loading...</p>
+    </div>
+
     <!-- ========================================
          HEADER
          ======================================== -->
@@ -538,12 +534,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="js/utils.js"></script>
-    <script src="js/player.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/mobile-gestures.js"></script>
-    <script src="js/spa.js"></script>
+    <!-- JavaScript -->
+    <script src="js/app.bundle.js"></script>
 </body>
 </html>
